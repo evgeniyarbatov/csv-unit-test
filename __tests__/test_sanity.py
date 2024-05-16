@@ -44,3 +44,7 @@ class SanityTest(unittest.TestCase):
                     self.get_sample_row(self.df[~is_increasing])
                 }",
             )
+
+    def test_total_distance(self):
+        last_row = self.df.iloc[-1]
+        self.assertEqual(round(last_row['distance']), 322)
